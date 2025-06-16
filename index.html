@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chicas Reels</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header><span>Chicas</span> <span>Reels</span></header>
+
+  <div class="video-container">
+    <video id="reelVideo" autoplay muted loop>
+      <source src="" type="video/mp4">
+      Tu navegador no soporta videos.
+    </video>
+
+    <div class="reactions">
+      <div>
+        <button class="reaction-btn like" onclick="toggleLike(this)">♡</button>
+        <div class="counter" id="likeCount">200,000</div>
+      </div>
+      <div>
+        <button class="reaction-btn comment" onclick="toggleComment(this)">💬</button>
+        <div class="counter" id="commentCount">1,000</div>
+      </div>
+      <div>
+        <button class="reaction-btn share" onclick="shareVideo()">↗</button>
+        <div class="counter" id="shareCount">300</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comments-box" id="commentsBox">
+    <p>🔥 ¡Este video está brutal!</p>
+    <p>😍 Me encanta el estilo</p>
+  </div>
+
+  <form class="comment-form" onsubmit="postComment(event)">
+    <input type="text" id="commentInput" placeholder="Escribe un comentario..." required />
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>

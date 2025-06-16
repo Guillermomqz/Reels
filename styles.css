@@ -1,0 +1,121 @@
+
+body {
+  margin: 0;
+  background-color: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  margin: 20px 0;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.4);
+}
+
+header span:first-child {
+  color: pink;
+}
+
+header span:last-child {
+  color: white;
+}
+
+.video-container {
+  width: 360px;
+  height: 640px;
+  position: relative;
+  background-color: #111;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reactions {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.reaction-btn {
+  font-size: 28px;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reaction-btn.active.like {
+  border-color: red;
+  color: red;
+}
+
+.reaction-btn.active.comment {
+  border-color: #00f;
+  color: #00f;
+}
+
+.reaction-btn.active.share {
+  border-color: #f0f;
+  color: #f0f;
+}
+
+.counter {
+  font-size: 14px;
+  text-align: center;
+}
+
+.comments-box {
+  width: 100%;
+  padding: 10px;
+  background: #111;
+  border-top: 1px solid #444;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.comments-box p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.comment-form {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  background: #222;
+  border-top: 1px solid #444;
+}
+
+.comment-form input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.comment-form button {
+  padding: 8px 15px;
+  border: none;
+  background: pink;
+  color: black;
+  font-weight: bold;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
